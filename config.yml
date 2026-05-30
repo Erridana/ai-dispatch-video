@@ -1,0 +1,70 @@
+# ─────────────────────────────────────────────
+#  AI Daily Brief — 个人配置文件
+#  修改后推送到 GitHub 即可生效，无需改代码
+# ─────────────────────────────────────────────
+
+# 关注主题（会出现在 Claude 的 prompt 中，引导分析方向）
+topics:
+  - robotics
+  - AI agents
+  - large language models
+  - multimodal models
+  - embodied AI
+
+# arxiv 过滤关键词（标题或摘要包含任意一个则保留）
+arxiv_keywords:
+  - robot
+  - robotics
+  - humanoid
+  - manipulation
+  - embodied
+  - agent
+  - agentic
+  - multi-agent
+  - autonomous
+  - llm
+  - language model
+  - gpt
+  - gemini
+  - claude
+  - qwen
+  - deepseek
+  - multimodal
+  - vision
+  - foundation model
+  - reasoning
+
+# ── 新闻来源 ──────────────────────────────────
+# 注释掉某行即可禁用该来源
+news_feeds:
+  OpenAI Blog:        https://openai.com/blog/rss.xml
+  Google DeepMind:    https://deepmind.google/discover/blog/rss.xml
+  Hugging Face:       https://huggingface.co/blog/feed.xml
+  The Verge AI:       https://www.theverge.com/ai-artificial-intelligence/rss/index.xml
+  MIT Tech Review AI: https://www.technologyreview.com/topic/artificial-intelligence/feed
+  VentureBeat AI:     https://venturebeat.com/category/ai/feed/
+  TechCrunch AI:      https://techcrunch.com/category/artificial-intelligence/feed/
+  arxiv cs.AI:        https://rss.arxiv.org/rss/cs.AI
+  arxiv cs.RO:        https://rss.arxiv.org/rss/cs.RO
+
+# ── 博客来源 ──────────────────────────────────
+# 更新频率低但质量高，窗口为 blog_hours
+blog_feeds:
+  Interconnects (Nathan Lambert):   https://www.interconnects.ai/feed
+  Ahead of AI (Sebastian Raschka):  https://magazine.sebastianraschka.com/feed
+  Import AI (Jack Clark):           https://importai.substack.com/feed
+  The Gradient:                     https://thegradient.pub/rss/
+  One Useful Thing (Ethan Mollick): https://www.oneusefulthing.org/feed
+  AI Snake Oil:                     https://aisnakeoil.substack.com/feed
+  Lilian Weng:                      https://lilianweng.github.io/index.xml
+  Last Week in AI:                  https://lastweekin.ai/feed
+
+# ── 运行参数 ──────────────────────────────────
+digest:
+  news_hours: 24          # 新闻回溯窗口（小时）
+  blog_hours: 72          # 博客回溯窗口（小时）
+  news_per_source: 50     # 每个新闻源最多抓取条数
+  blog_per_source: 5      # 每个博客最多抓取条数
+  model: claude-opus-4-7  # claude-opus-4-7 / claude-sonnet-4-6
+  max_tokens: 6000
+  output_language: 中文   # 摘要输出语言
