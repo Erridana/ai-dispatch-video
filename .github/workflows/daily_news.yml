@@ -56,7 +56,9 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           RECIPIENT_EMAIL:   ${{ secrets.RECIPIENT_EMAIL }}
         run: python fetch_news.py
-
+        env:
+            OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+            OPENAI_BASE_URL: "https://api.promptra.ru/v1"
       - name: Commit updated sent history
         if: steps.timecheck.outputs.should_send == 'true' || github.event_name == 'workflow_dispatch'
         run: |
